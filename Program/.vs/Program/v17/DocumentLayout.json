@@ -5,6 +5,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{B95DC5D0-C022-409B-9887-1FBADC316C02}|Program.vcxproj|C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Program\\Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B95DC5D0-C022-409B-9887-1FBADC316C02}|Program.vcxproj|solutionrelative:Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0653D7DF-898B-450A-BCEA-0A09B672AC07}|..\\Class 6th(Euclid)\\Class 6th(Euclid).vcxproj|C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Class 6th(Euclid)\\Class 6th(Euclid).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +17,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class 6th(Euclid).cpp",
+              "DocumentMoniker": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Class 6th(Euclid)\\Class 6th(Euclid).cpp",
+              "RelativeDocumentMoniker": "..\\Class 6th(Euclid)\\Class 6th(Euclid).cpp",
+              "ToolTip": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Class 6th(Euclid)\\Class 6th(Euclid).cpp",
+              "RelativeToolTip": "..\\Class 6th(Euclid)\\Class 6th(Euclid).cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-06T05:11:22.008Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +40,7 @@
               "RelativeDocumentMoniker": "Program.cpp",
               "ToolTip": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Program\\Program.cpp",
               "RelativeToolTip": "Program.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-04T04:25:36.921Z",
               "EditorCaption": ""
