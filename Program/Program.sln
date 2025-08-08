@@ -21,6 +21,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class7th (Sieve of Eratosth
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 8th (devide and conque)", "..\Class 8th (devide and conque)\Class 8th (devide and conque).vcxproj", "{A24F8FCA-9C19-4B0F-BA1B-4FF6099C8E71}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 9th (바이너리서치)", "..\Class 9th (바이너리서치)\Class 9th (바이너리서치).vcxproj", "{280868F5-8D0E-43C7-B09B-443071F31553}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "..\Test\Test.vcxproj", "{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +105,22 @@ Global
 		{A24F8FCA-9C19-4B0F-BA1B-4FF6099C8E71}.Release|x64.Build.0 = Release|x64
 		{A24F8FCA-9C19-4B0F-BA1B-4FF6099C8E71}.Release|x86.ActiveCfg = Release|Win32
 		{A24F8FCA-9C19-4B0F-BA1B-4FF6099C8E71}.Release|x86.Build.0 = Release|Win32
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Debug|x64.ActiveCfg = Debug|x64
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Debug|x64.Build.0 = Debug|x64
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Debug|x86.ActiveCfg = Debug|Win32
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Debug|x86.Build.0 = Debug|Win32
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Release|x64.ActiveCfg = Release|x64
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Release|x64.Build.0 = Release|x64
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Release|x86.ActiveCfg = Release|Win32
+		{280868F5-8D0E-43C7-B09B-443071F31553}.Release|x86.Build.0 = Release|Win32
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Debug|x64.ActiveCfg = Debug|x64
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Debug|x64.Build.0 = Debug|x64
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Debug|x86.ActiveCfg = Debug|Win32
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Debug|x86.Build.0 = Debug|Win32
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Release|x64.ActiveCfg = Release|x64
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Release|x64.Build.0 = Release|x64
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Release|x86.ActiveCfg = Release|Win32
+		{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

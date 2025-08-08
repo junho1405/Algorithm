@@ -1,77 +1,47 @@
 ﻿#include<iostream>
 using namespace std;
 
-//int find(int list[], int target, int left , int right)
-//{
-//	int mid = (left + right) / 2;
-//	
-//		cout << "target은" << target << "입니다." << endl;
-//		cout << "중간배열은" << mid << "입니다." << endl;
-//		cout << "중간배열의 값은" << list[mid] << "입니다." << endl;
-//		if (left > right)
-//		{
-//			cout << "찾는 숫자없음" << endl;
-//		}
-//	if(list[mid] == target)
-//	{
-//		cout << "찾았습니다. target은" << target << "입니다." << endl;
-//	}
-//	if (list[mid] < target)
-//	{
-//		cout << "target이 더 큽니다. 배열을 반으로 나눠 오른쪽으로 갑니다.\n 재귀함수 작동 \n\n";
-//		return find(list, target, right,mid-1);
-//
-//	}
-//	if (list[mid] > target)
-//	{
-//		cout << "target이 더 작습니다. 배열을 반으로 나눠 왼쪽으로 갑니다.\n 재귀함수 작동 \n\n";
-//		return find(list, target, mid-1, left);
-//	}
-//	else
-//	{
-//		cout << "해당하는 숫자"<< target <<"는 없습니다." << endl;
-//	}
-//	return 0;
-//}
-
-void search(int list[], int key, int size)
+void counting(int count[], int size)
 {
-	int left = 0;
-	int right = size - 1;
-	while (left <= right)
-	{
-		int pivot = (left + right) / 2;
-		if (list[pivot] == key)
-		{
-			cout << "key found :" << list[pivot] << endl;
+	// count의 모든 배열을 불러오고 그 배열들 간의 비교 카운팅
+	// 필요한거 list에 있는 배열종류/몇갠지 셀것
 
-			return;
-		}
-		else if(list[pivot]>key)
-		{
-			right = pivot;
-		}
-		else
-		{
-			left = pivot;
-		}
+	// 힌트
+	// 계수의 최대값구하기
+	// 계수저장 배열만들기
+	// 등장횟수 카운트
+	// 결과출력
+	//  
+
+	//최대값(완료)
+	//배열의 크기를 구하기 위해서임
+	//그럼 max를 토대로 새로운 배열을 만든다?
+	int max = count[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (count[i] > max) max = count[i];
+		int* container = new int[max + 1] {0};
+	}
+	// 계수저장하기
+
+	for (int i = 0; i < size; i++)
+	{
+		int j = count[i];//배열의종류 불러옴
+
 	}
 }
 int main()
 {
-#pragma region  이분탐색
-	//탐색 범위를 반으로 나누어 찾는 값을 포함하는 범위를
-	// 좁혀나가는 방식으로 동작하는 알고리즘입니다.
+#pragma region 계수정렬
+	// 데이터의 값을 비교하지 않고 각 원소에 데이터가 몇 개
+	// 있는 지 개수를 세어 지정한 다음 정렬하는 알고리즘입니다.
 	// 
-	// 오름차순 정렬로 한 상태로 할것
-	// 1. 찾으려는 배열의 중간값을 구한다.
-	// 2. 중간값이 찾으려는 수보다 크냐 작냐로 범위를 축소
-	// 3. 반복해서 값 찾기
-	// 4. 만약 값이 없으면 없다고 출력하기
-	// 
+
 #pragma endregion
 
-	int list[] = { 5,6,11 };
+	int list[] = { 1,1,2,2,2,3,4,5 };
 	int size = sizeof(list) / sizeof(list[0]);
-	search (list,6, size);
+	counting(list, size);
+
+	return 0;
 }
