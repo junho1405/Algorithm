@@ -1,47 +1,44 @@
-﻿#include<iostream>
+﻿#include <iostream>
 using namespace std;
 
-void counting(int count[], int size)
+void combine(int list[], int middle, int end)
 {
-	// count의 모든 배열을 불러오고 그 배열들 간의 비교 카운팅
-	// 필요한거 list에 있는 배열종류/몇갠지 셀것
+	
 
-	// 힌트
-	// 계수의 최대값구하기
-	// 계수저장 배열만들기
-	// 등장횟수 카운트
-	// 결과출력
-	//  
+}
 
-	//최대값(완료)
-	//배열의 크기를 구하기 위해서임
-	//그럼 max를 토대로 새로운 배열을 만든다?
-	int max = count[0];
-	for (int i = 0; i < size; i++)
+void merge_sort(int list[], int start, int end)
+{
+	if (start < end)
 	{
-		if (count[i] > max) max = count[i];
-		int* container = new int[max + 1] {0};
-	}
-	// 계수저장하기
-
-	for (int i = 0; i < size; i++)
-	{
-		int j = count[i];//배열의종류 불러옴
-
+		int middle = (start + end) / 2;
+		merge_sort(list, start, middle);
+		merge_sort(list, middle + 1, end);
 	}
 }
+
 int main()
 {
-#pragma region 계수정렬
-	// 데이터의 값을 비교하지 않고 각 원소에 데이터가 몇 개
-	// 있는 지 개수를 세어 지정한 다음 정렬하는 알고리즘입니다.
+#pragma region 병합정렬
+	// 하나의 리스트를 두 개의 균일한 크기로 분할하고 분할된
+	// 부분 리스트를 정렬한 다음, 두 개의 정렬된 부분 리스트를
+	// 합하여 전체가 정렬된 리스트가 되게 하는 방법입니다.
+	// 
+	// 1. 리스트의 길이가 0 또는 1이 되면 이미 정렬된 것으로 봅니다.
+	// 
+	// 2. 그렇지 않은 경우
+	// 
+	// 2-1.	정렬되지 않은 리스트를 절반으로 잘라 비슷한 크기의
+	//		두 부분 리스트로 나눕니다.
+	// 
+	// 2-2.	각 부분 리스트를 재귀적으로 병합 정렬을 이용하여 정렬합니다.
+	// 
+	// 2-3.	두 부분 리스트를 다시 하나의 정렬된 리스트로 병합합니다.
 	// 
 
+	int list[] = { 3,5,2,7,4,1,8,6 };
+	int size = sizeof(list) / sizeof(list[0]);
+	merge_sort(list, 0, size - 1);
 #pragma endregion
 
-	int list[] = { 1,1,2,2,2,3,4,5 };
-	int size = sizeof(list) / sizeof(list[0]);
-	counting(list, size);
-
-	return 0;
 }
