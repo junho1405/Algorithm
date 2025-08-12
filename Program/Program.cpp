@@ -1,44 +1,57 @@
-﻿#include <iostream>
+﻿#include<iostream>;
+
 using namespace std;
 
-void combine(int list[], int middle, int end)
-{
-	
+const int value = 100;
+int memo[value] = { 0 };
 
-}
-
-void merge_sort(int list[], int start, int end)
+int fibonacci(int n)
 {
-	if (start < end)
+	//if (n <= 1)
+	//{
+	//	return n;
+	//}
+	//return fibonacci(n - 1) + fibonacci(n - 2);
+	//if (n == 1 || n == 2)
+	//	return 1;
+
+	if (memo[n] != 0)
 	{
-		int middle = (start + end) / 2;
-		merge_sort(list, start, middle);
-		merge_sort(list, middle + 1, end);
+		return memo[n];
 	}
-}
+	memo[n] = fibonacci(n - 1) + fibonacci(n - 2);
+	return memo[n];
 
+
+}
 int main()
 {
-#pragma region 병합정렬
-	// 하나의 리스트를 두 개의 균일한 크기로 분할하고 분할된
-	// 부분 리스트를 정렬한 다음, 두 개의 정렬된 부분 리스트를
-	// 합하여 전체가 정렬된 리스트가 되게 하는 방법입니다.
-	// 
-	// 1. 리스트의 길이가 0 또는 1이 되면 이미 정렬된 것으로 봅니다.
-	// 
-	// 2. 그렇지 않은 경우
-	// 
-	// 2-1.	정렬되지 않은 리스트를 절반으로 잘라 비슷한 크기의
-	//		두 부분 리스트로 나눕니다.
-	// 
-	// 2-2.	각 부분 리스트를 재귀적으로 병합 정렬을 이용하여 정렬합니다.
-	// 
-	// 2-3.	두 부분 리스트를 다시 하나의 정렬된 리스트로 병합합니다.
-	// 
 
-	int list[] = { 3,5,2,7,4,1,8,6 };
-	int size = sizeof(list) / sizeof(list[0]);
-	merge_sort(list, 0, size - 1);
+#pragma region 동적계획법
+	// 특정 범위까지의 값을 구하기 위해 그것과 다른 범위까지의
+	// 값을 이용하여 효율적으로 값을 구하는 알고리즘입니다.
+	// 
+	// 겹치는 부분 문제 (OverLapping Subproblem)
+	// 동일한 작은 문제들이 반복하여 나타나는 경우를 의미합니다.
+	// 
+	// 최적 부분 구조(Optimal Substure)
+	// 부분 문제 최적 결과값을 사용하여 전체 문제의 최적의
+	// 결과를 낼 수있는 경우를 의미합니다.
+	// 
+	// 메모이제이션(Memoization)
+	// 프로그램이 동일한 계산을 반복해야 할 때, 이전에 계산한 값을
+	// 메모리에 저장함으로써 동일한 계산을 반복 수행하는 작업을
+	// 제거하여 프로그램이 실행 속도를 항상시키는 방법입니다.
+	// 
+	// 
+	int n = 200;
+	cout << fibonacci(n) << endl;
+	fibonacci(n);
+	for (int i = 1; i < n; i++)
+	{
+		cout << fibonacci(i) << " ";
+	}	
 #pragma endregion
 
+	return 0;
 }
