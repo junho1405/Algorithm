@@ -24,8 +24,17 @@ public:
 	void search(int start)
 	{
 		visited[start] = true;
-		for(int )
+		cout << start << " ";
+		for (int i = 0; i < adjacencyList[start].size(); i++)
+		{
+			int next = adjacencyList[start][i];
+			if (!visited[next])
+			{
+				search(next);
+			}
+		}
 	}
+
 };
 
 
@@ -49,7 +58,7 @@ int main()
 	graph.insert(4, 5);
 	graph.insert(6, 7);
 
-	graph.search(7);
+	graph.search(2);
 #pragma endregion
 
 	return 0;
