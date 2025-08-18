@@ -1,2 +1,2 @@
 ﻿  Program.cpp
-  Program.vcxproj -> C:\Users\OFFICE\Desktop\junho\Algorithm\Algorithm\Program\x64\Debug\Program.exe
+C:\Users\OFFICE\Desktop\junho\Algorithm\Algorithm\Program\Program.cpp(28,3): error C2105: '--'에 l-value가 필요합니다.
