@@ -1,0 +1,4 @@
+﻿  Class 19th (Kruskal).cpp
+C:\Users\OFFICE\Desktop\junho\Algorithm\Algorithm\Class 19th (Kruskal)\Class 19th (Kruskal).cpp(108,7): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\OFFICE\Desktop\junho\Algorithm\Algorithm\Class 19th (Kruskal)\Class 19th (Kruskal).cpp(34,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+  Class 19th (Kruskal).vcxproj -> C:\Users\OFFICE\Desktop\junho\Algorithm\Algorithm\Program\x64\Debug\Class 19th (Kruskal).exe

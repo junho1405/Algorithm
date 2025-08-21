@@ -1,126 +1,112 @@
 ﻿#include<iostream>
-#include<vector>
-#include<algorithm>
+
 using namespace std;
+#define SIZE 6
+#define INFINITY 100
 
-#define SIZE 7
-int parent[SIZE];
 
-class Kruskal
+
+class Dijkstra
 {
-
 private:
-	class Edge
+	long long graph[SIZE][SIZE] =
 	{
-	private:
-		int vertexX;
-		int vertexY;
-		int weight;
-	public:
-		Edge(int vertexX, int vertexY, int weight)
-		{
-			this->vertexX = vertexX;
-			this->vertexY = vertexY;
-			this->weight = weight;
-		}
-
-		const int& X() { return vertexX; }
-		const int& Y() { return vertexY; }
-		const int& Weight() { return weight; }
-
-		const bool& operator < (const Edge& edge)
-		{
-			return weight < edge.weight;
-		}
+		{0,2,5,1, INFINITY,INFINITY},
+		{ 2,0,3,2, INFINITY,INFINITY },
+		{ 5,3,0,3, 1	,5 },
+		{ 1,2,3,0, 1,INFINITY },
+		{ INFINITY,INFINITY,1,1,0,2 },
+		{ INFINITY,INFINITY,5,INFINITY,2,0 },
 	};
 
-	vector<Edge> nodeList;
+	bool visited[SIZE];
+	long long distance[SIZE];
+
 public:
-	Kruskal()
+	Dijkstra()
 	{
-
-	}
-	void insert(int vertexX, int vertexY, int weight)
-	{
-		Edge edge(vertexX, vertexY, weight);
-		nodeList.push_back(edge);
-	}
-	void calculate()
-	{
-		sort(nodeList.begin(), nodeList.end());
-		for ( int  i = 0; i<nodeList.size();i++)
+		for (int i = 0; i < SIZE; i++)
 		{
-			cout << nodeList[i].X() << " - " << nodeList[i].Y() << " : " << nodeList[i].Weight();
-			cout<< endl;
-			//cout << nodeList[i].X() << endl;
-			//cout << nodeList[i].Y() << endl;
-			//cout << nodeList[i].Weight() << endl;
-		}	
+			visited[i] = 0;
+			distance[i] = 0;
+
+		}
 	}
+	const int& find()
+	{
+		int index = 0;
+		int min = INFINITY;
+		for (int i = 0; i < SIZE; i++)
+		{
+			if (distance[i] < min && visited[i] == false)
+			{
+				min = distance[i];
+				index = i;
+			}
+		}
+		//for (int i = 0; i < SIZE; i++)
+		//{
+		//	for (int j = 0; j < SIZE; j++)
+		//	{
+		//		cout << graph[i][j]<<" ";
+		//	}
+		//		cout<<endl;
+		//}
+		return index;
+	}
+
+	void update(int start)
+	{
+		for (int i = 0; i < SIZE; i++)
+		{
+			distance[i] = graph[start][i];
+		}
+		visited[start] = true;
+		for (int i = 0; i < SIZE; i++)
+		{
+			int minNode = find();
+			visited[minNode] = true;
+			for (int j = 0; j < SIZE; j++)
+			{
+				if (visited[j] == false)
+				{
+					if (distance[minNode] + graph[minNode][j] < distance[j])
+					{
+						distance[j] = distance[minNode] + graph[minNode][j];
+					}
+				}
+			}
+		}
+		for (const auto& element : distance)
+		{
+			cout << element << " ";
+		}
+	}
+
 };
-
-int find(int x)
-{
-	//배열의 index와 값이 같다면 root node를 발견하였습니다.
-
-	// 부모노드의 변수를 전달하면서, root node를 찾을 때까지
-	// 재귀함수를 호출하여 반복합니다.
-	if (parent[x] == x)//int x가 배열의 index와 같은지
-	{
-		return x;
-	}
-	else
-	{
-		return parent[x] = find(parent[x]);
-
-	}
-}
-void Union(int x, int y)
-{
-	x = find(x);
-	y = find(y);
-	if (x == y) return;
-	if (x < y)
-	{
-		parent[y] = x;
-	}
-	else
-	{
-		parent[x] = y;
-	}
-}
-int cost(Kruskal& kruskal)
-{
-	for (int i = 0; i < SIZE; i++)
-		parent[i] = i;
-
-	int totalCost = 0;
-	return totalCost;
-	cout << totalCost;
-}
 
 int main()
 {
-#pragma region 최소 신장 트리
-	// 그래프와 모든 정점을 포함하면서 사이클이 존재하지 않는
-	// 부분 그래프로, 그래프의 모든 정점을 최소 비용으로 연결하는 트리입니다.
+#pragma region 다익스트라 알고리즘
+	// 시작점으로부터 모든 노드까지의 거리를 구해주는
+	// 알고리즘 입니다.
 	// 
-	// 그래프의 정점의 수가 n개 일 때, 간선의 수는 n-1개 입니다.
+	// 1. 거리 배열에서 weight[시작 노드]의 값들로 초기화 합니다.
 	// 
-	Kruskal kruskal;
-	kruskal.insert(1, 2, 71);
-	kruskal.insert(1, 4, 30);
-	kruskal.insert(1, 5, 15);
-	kruskal.insert(1, 7, 12);
-	kruskal.insert(2, 4, 23);
-	kruskal.insert(2, 5, 65);
-	kruskal.insert(3, 5, 18);
-	kruskal.insert(3, 6, 36);
-	kruskal.insert(4, 7, 13);
-	kruskal.insert(5, 6, 44);
-	kruskal.insert(5, 7, 79);
-
-	kruskal.calculate();
-
+	// 2. 시작점을 방문처리합니다.
+	// 
+	// 3. 거리 배열에서 최소 비율 노드를 찾고 방문 처리합니다.
+	//		단, 이미 방문한 노드는 제외합니다.
+	// 
+	// 4. 최소 비율 노드로 가져갈 지 고민해서 거리 배열을 갱신합니다.
+	//		단, 이미 방문한 노드는 제외합니다.
+	// 
+	// 5. 모든 노드를 방문할 때까지 3번~4번을 반복합니다.
+	// 
+	// 방문하지 않은 노드 중에서 가장 작은 거리를 가진 노드를
+	// 방문하고, 그 노드와 연결된 다른 노드까지의 거리를 계산합니다.
+	// 
 #pragma endregion
+	Dijkstra dijkstra;
+	dijkstra.update(0);
 }
