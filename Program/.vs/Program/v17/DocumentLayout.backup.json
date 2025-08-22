@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Program\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A7A2926F-FB55-4F1E-B7EA-5E1B0542DF84}|..\\Test\\Test.vcxproj|C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Test\\Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B95DC5D0-C022-409B-9887-1FBADC316C02}|Program.vcxproj|C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Program\\Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B95DC5D0-C022-409B-9887-1FBADC316C02}|Program.vcxproj|solutionrelative:Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -17,11 +20,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Test.cpp",
+              "DocumentMoniker": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Test\\Test.cpp",
+              "RelativeDocumentMoniker": "..\\Test\\Test.cpp",
+              "ToolTip": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Test\\Test.cpp",
+              "RelativeToolTip": "..\\Test\\Test.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-22T04:06:09.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Class 19th (Kruskal).cpp",
               "DocumentMoniker": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Class 19th (Kruskal)\\Class 19th (Kruskal).cpp",
               "RelativeDocumentMoniker": "..\\Class 19th (Kruskal)\\Class 19th (Kruskal).cpp",
@@ -29,18 +45,17 @@
               "RelativeToolTip": "..\\Class 19th (Kruskal)\\Class 19th (Kruskal).cpp",
               "ViewState": "AgIAAGcAAAAAAAAAAAAswFMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-21T04:16:38.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T04:16:38.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cpp",
               "DocumentMoniker": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Program\\Program.cpp",
               "RelativeDocumentMoniker": "Program.cpp",
               "ToolTip": "C:\\Users\\OFFICE\\Desktop\\junho\\Algorithm\\Algorithm\\Program\\Program.cpp",
               "RelativeToolTip": "Program.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwDYAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAcwDAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-19T04:26:21.959Z",
               "EditorCaption": ""
